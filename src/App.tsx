@@ -317,8 +317,8 @@ function HomePage({ data }: { data: Archive }) {
         </div>
         <figure className="hero-image">
           <img
-            src={photoPath(52)}
-            alt="原村史中的洗马桥全景，屋舍、山峦与村庄风貌"
+            src={asset("media/cover/xiajin-dijiao.png")}
+            alt="下津堤脚，老屋、村路、池塘与远山"
             fetchPriority="high"
           />
           <div className="hero-photo-overlay" />
@@ -327,9 +327,9 @@ function HomePage({ data }: { data: Archive }) {
           </span>
           <figcaption>
             <span>
-              乡土记忆 <i> / </i> 洗马桥全景
+              乡土记忆 <i> / </i> 下津堤脚
             </span>
-            <span>影像选自原村史</span>
+            <span>乡土影像</span>
           </figcaption>
           <span className="vertical-note">山水有相逢 · 故乡有回声</span>
         </figure>
