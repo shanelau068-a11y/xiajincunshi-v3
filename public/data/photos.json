@@ -20,11 +20,14 @@
   {
     "id": "scan-photo-004",
     "title": "扫描页 2 提取照片 1",
-    "category": "村貌风物",
+    "category": "村域示意",
     "image": "media/photos/下津村史_(2)_photo_01.jpg",
     "sourcePage": "下津村史 (2).jpg",
     "description": "由村史扫描页自动初筛裁出，建议后续人工校对标题、年代和人物说明。",
-    "year": "村史扫描件"
+    "year": "村史扫描件",
+    "reviewNote": "经目视核对，扫描页2为“下津村在桥东街道的位置示意图”，将原“村貌风物”细分为“村域示意”。",
+    "originalCategory": "村貌风物",
+    "originalTitle": "扫描页 2 提取照片 1"
   },
   {
     "id": "scan-photo-005",
@@ -163,12 +166,15 @@
   },
   {
     "id": "scan-photo-024",
-    "title": "扫描页 52 提取照片 1",
+    "title": "洗马桥全景",
     "category": "村貌风物",
     "image": "media/photos/下津村史_(52)_photo_01.jpg",
     "sourcePage": "下津村史 (52).jpg",
     "description": "由村史扫描页自动初筛裁出，建议后续人工校对标题、年代和人物说明。",
-    "year": "村史扫描件"
+    "year": "村史扫描件",
+    "reviewNote": "经目视核对扫描照片下方文字为“洗马桥全景”，以原书图注替换自动生成的扫描页标题。",
+    "originalCategory": "村貌风物",
+    "originalTitle": "扫描页 52 提取照片 1"
   },
   {
     "id": "scan-photo-028",
@@ -560,74 +566,98 @@
   {
     "id": "scan-photo-076",
     "title": "扫描页 188 提取照片 1",
-    "category": "教育影像",
+    "category": "墓园碑刻",
     "image": "media/photos/下津村史_(188)_photo_01.jpg",
     "sourcePage": "下津村史 (188).jpg",
     "description": "由村史扫描页自动初筛裁出，建议后续人工校对标题、年代和人物说明。",
-    "year": "村史扫描件"
+    "year": "村史扫描件",
+    "reviewNote": "经目视核对扫描页188的照片，内容为墓园或碑刻，修正原按页码自动归为“教育影像”的分类。",
+    "originalCategory": "教育影像",
+    "originalTitle": "扫描页 188 提取照片 1"
   },
   {
     "id": "scan-photo-077",
     "title": "扫描页 188 提取照片 2",
-    "category": "教育影像",
+    "category": "墓园碑刻",
     "image": "media/photos/下津村史_(188)_photo_02.jpg",
     "sourcePage": "下津村史 (188).jpg",
     "description": "由村史扫描页自动初筛裁出，建议后续人工校对标题、年代和人物说明。",
-    "year": "村史扫描件"
+    "year": "村史扫描件",
+    "reviewNote": "经目视核对扫描页188的照片，内容为墓园或碑刻，修正原按页码自动归为“教育影像”的分类。",
+    "originalCategory": "教育影像",
+    "originalTitle": "扫描页 188 提取照片 2"
   },
   {
     "id": "scan-photo-078",
     "title": "扫描页 189 提取照片 1",
-    "category": "教育影像",
+    "category": "墓园碑刻",
     "image": "media/photos/下津村史_(189)_photo_01.jpg",
     "sourcePage": "下津村史 (189).jpg",
     "description": "由村史扫描页自动初筛裁出，建议后续人工校对标题、年代和人物说明。",
-    "year": "村史扫描件"
+    "year": "村史扫描件",
+    "reviewNote": "经目视核对扫描页189的照片，内容为墓园或碑刻，修正原按页码自动归为“教育影像”的分类。",
+    "originalCategory": "教育影像",
+    "originalTitle": "扫描页 189 提取照片 1"
   },
   {
     "id": "scan-photo-079",
     "title": "扫描页 190 提取照片 1",
-    "category": "教育影像",
+    "category": "墓园碑刻",
     "image": "media/photos/下津村史_(190)_photo_01.jpg",
     "sourcePage": "下津村史 (190).jpg",
     "description": "由村史扫描页自动初筛裁出，建议后续人工校对标题、年代和人物说明。",
-    "year": "村史扫描件"
+    "year": "村史扫描件",
+    "reviewNote": "经目视核对扫描页190的照片，内容为墓园或碑刻，修正原按页码自动归为“教育影像”的分类。",
+    "originalCategory": "教育影像",
+    "originalTitle": "扫描页 190 提取照片 1"
   },
   {
     "id": "scan-photo-080",
     "title": "扫描页 190 提取照片 2",
-    "category": "教育影像",
+    "category": "墓园碑刻",
     "image": "media/photos/下津村史_(190)_photo_02.jpg",
     "sourcePage": "下津村史 (190).jpg",
     "description": "由村史扫描页自动初筛裁出，建议后续人工校对标题、年代和人物说明。",
-    "year": "村史扫描件"
+    "year": "村史扫描件",
+    "reviewNote": "经目视核对扫描页190的照片，内容为墓园或碑刻，修正原按页码自动归为“教育影像”的分类。",
+    "originalCategory": "教育影像",
+    "originalTitle": "扫描页 190 提取照片 2"
   },
   {
     "id": "scan-photo-081",
     "title": "扫描页 190 提取照片 3",
-    "category": "教育影像",
+    "category": "墓园碑刻",
     "image": "media/photos/下津村史_(190)_photo_03.jpg",
     "sourcePage": "下津村史 (190).jpg",
     "description": "由村史扫描页自动初筛裁出，建议后续人工校对标题、年代和人物说明。",
-    "year": "村史扫描件"
+    "year": "村史扫描件",
+    "reviewNote": "经目视核对扫描页190的照片，内容为墓园或碑刻，修正原按页码自动归为“教育影像”的分类。",
+    "originalCategory": "教育影像",
+    "originalTitle": "扫描页 190 提取照片 3"
   },
   {
     "id": "scan-photo-082",
     "title": "扫描页 190 提取照片 4",
-    "category": "教育影像",
+    "category": "墓园碑刻",
     "image": "media/photos/下津村史_(190)_photo_04.jpg",
     "sourcePage": "下津村史 (190).jpg",
     "description": "由村史扫描页自动初筛裁出，建议后续人工校对标题、年代和人物说明。",
-    "year": "村史扫描件"
+    "year": "村史扫描件",
+    "reviewNote": "经目视核对扫描页190的照片，内容为墓园或碑刻，修正原按页码自动归为“教育影像”的分类。",
+    "originalCategory": "教育影像",
+    "originalTitle": "扫描页 190 提取照片 4"
   },
   {
     "id": "scan-photo-083",
     "title": "扫描页 193 提取照片 1",
-    "category": "教育影像",
+    "category": "文体活动",
     "image": "media/photos/下津村史_(193)_photo_01.jpg",
     "sourcePage": "下津村史 (193).jpg",
     "description": "由村史扫描页自动初筛裁出，建议后续人工校对标题、年代和人物说明。",
-    "year": "村史扫描件"
+    "year": "村史扫描件",
+    "reviewNote": "经目视核对扫描页193的照片，内容为文体活动，修正原按页码自动归为“教育影像”的分类。",
+    "originalCategory": "教育影像",
+    "originalTitle": "扫描页 193 提取照片 1"
   },
   {
     "id": "scan-photo-084",

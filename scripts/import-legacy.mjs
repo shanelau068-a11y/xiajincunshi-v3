@@ -326,6 +326,29 @@ const photos = readArray("gallery", "galleryPhotos")
   )
   .map((photo) => {
     const file = path.basename(photo.image);
+    const scanPage = Number(file.match(/下津村史_\((\d+)\)_photo_/u)?.[1]);
+    const reviewed = {};
+    if ([188, 189, 190].includes(scanPage)) {
+      reviewed.category = "墓园碑刻";
+      reviewed.reviewNote = `经目视核对扫描页${scanPage}的照片，内容为墓园或碑刻，修正原按页码自动归为“教育影像”的分类。`;
+    } else if (scanPage === 193) {
+      reviewed.category = "文体活动";
+      reviewed.reviewNote =
+        "经目视核对扫描页193的照片，内容为文体活动，修正原按页码自动归为“教育影像”的分类。";
+    } else if (scanPage === 2) {
+      reviewed.category = "村域示意";
+      reviewed.reviewNote =
+        "经目视核对，扫描页2为“下津村在桥东街道的位置示意图”，将原“村貌风物”细分为“村域示意”。";
+    }
+    if (/^下津村史_\(52\)_photo_01\.jpg$/u.test(file)) {
+      reviewed.title = "洗马桥全景";
+      reviewed.reviewNote =
+        "经目视核对扫描照片下方文字为“洗马桥全景”，以原书图注替换自动生成的扫描页标题。";
+    }
+    if (reviewed.reviewNote) {
+      reviewed.originalCategory = photo.category;
+      reviewed.originalTitle = photo.title;
+    }
     fs.copyFileSync(
       path.join(source, "public", photo.image.replace(/^\//, "")),
       path.join(mediaRoot, "photos", file),
@@ -338,6 +361,7 @@ const photos = readArray("gallery", "galleryPhotos")
       sourcePage: photo.sourcePage ?? "",
       description: photo.description,
       year: photo.year,
+      ...reviewed,
     };
   });
 const people = readArray("people", "people").map((person) => {
