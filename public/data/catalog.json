@@ -1,0 +1,815 @@
+[
+  {
+    "id": "preface",
+    "kind": "book",
+    "part": "前言",
+    "title": "前言",
+    "description": "说明村史编纂缘起、资料来源与保存乡土记忆的意义。",
+    "documentId": "d-001",
+    "children": []
+  },
+  {
+    "id": "land",
+    "kind": "book",
+    "part": "第一篇",
+    "title": "土地资源",
+    "description": "记述村庄地理、田畴、水土、山林与自然资源。",
+    "documentId": "d-002",
+    "children": []
+  },
+  {
+    "id": "origin",
+    "kind": "book",
+    "part": "第二篇",
+    "title": "先祖创乡",
+    "description": "追溯先民迁徙、开基创业与村落形成脉络。",
+    "documentId": "d-003",
+    "children": [
+      {
+        "id": "d-004",
+        "kind": "book",
+        "title": "第一章　刘氏",
+        "documentId": "d-004",
+        "children": [
+          {
+            "id": "d-005",
+            "kind": "book",
+            "title": "第一节　桃坑刘氏源流纪略",
+            "documentId": "d-005",
+            "children": []
+          },
+          {
+            "id": "d-006",
+            "kind": "book",
+            "title": "第二节　桃坑乡",
+            "documentId": "d-006",
+            "children": []
+          },
+          {
+            "id": "d-007",
+            "kind": "book",
+            "title": "第三节　窟尾沟乡",
+            "documentId": "d-007",
+            "children": []
+          },
+          {
+            "id": "d-008",
+            "kind": "book",
+            "title": "第四节　巷内乡",
+            "documentId": "d-008",
+            "children": []
+          },
+          {
+            "id": "d-009",
+            "kind": "book",
+            "title": "第五节　盐墩乡",
+            "documentId": "d-009",
+            "children": []
+          },
+          {
+            "id": "d-010",
+            "kind": "book",
+            "title": "第六节　茂利乡",
+            "documentId": "d-010",
+            "children": []
+          },
+          {
+            "id": "d-011",
+            "kind": "book",
+            "title": "第七节　铺仔前",
+            "documentId": "d-011",
+            "children": []
+          },
+          {
+            "id": "d-012",
+            "kind": "book",
+            "title": "第八节　洗马桥刘氏",
+            "documentId": "d-012",
+            "children": []
+          },
+          {
+            "id": "d-013",
+            "kind": "book",
+            "title": "第九节　海鹅头刘氏",
+            "documentId": "d-013",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "d-014",
+        "kind": "book",
+        "title": "第二章　廖氏",
+        "documentId": "d-014",
+        "children": [
+          {
+            "id": "d-015",
+            "kind": "book",
+            "title": "第一节　下津廖氏源流纪略",
+            "documentId": "d-015",
+            "children": []
+          },
+          {
+            "id": "d-016",
+            "kind": "book",
+            "title": "第二节　廖厝",
+            "documentId": "d-016",
+            "children": []
+          },
+          {
+            "id": "d-017",
+            "kind": "book",
+            "title": "第三节　草美乡",
+            "documentId": "d-017",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "d-018",
+        "kind": "book",
+        "title": "第三章　陈氏",
+        "documentId": "d-018",
+        "children": [
+          {
+            "id": "d-019",
+            "kind": "book",
+            "title": "第一节　下津陈氏源流纪略",
+            "documentId": "d-019",
+            "children": []
+          },
+          {
+            "id": "d-020",
+            "kind": "book",
+            "title": "第二节　陈厝",
+            "documentId": "d-020",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "d-021",
+        "kind": "book",
+        "title": "第四章　康氏",
+        "documentId": "d-021",
+        "children": [
+          {
+            "id": "d-022",
+            "kind": "book",
+            "title": "第一节　下津康氏源流纪略",
+            "documentId": "d-022",
+            "children": []
+          },
+          {
+            "id": "d-023",
+            "kind": "book",
+            "title": "第二节　康厝",
+            "documentId": "d-023",
+            "children": []
+          },
+          {
+            "id": "d-024",
+            "kind": "book",
+            "title": "第三节　杜猴寨康氏",
+            "documentId": "d-024",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "d-025",
+        "kind": "book",
+        "title": "第五章　洪氏",
+        "documentId": "d-025",
+        "children": [
+          {
+            "id": "d-026",
+            "kind": "book",
+            "title": "第一节　下津洪氏源流纪略",
+            "documentId": "d-026",
+            "children": []
+          },
+          {
+            "id": "d-027",
+            "kind": "book",
+            "title": "第二节　洪厝",
+            "documentId": "d-027",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "d-028",
+        "kind": "book",
+        "title": "第六章　潘氏",
+        "documentId": "d-028",
+        "children": [
+          {
+            "id": "d-029",
+            "kind": "book",
+            "title": "第一节　下津潘氏源流纪略",
+            "documentId": "d-029",
+            "children": []
+          },
+          {
+            "id": "d-030",
+            "kind": "book",
+            "title": "第二节　潘厝",
+            "documentId": "d-030",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "d-031",
+        "kind": "book",
+        "title": "第七章　黄氏",
+        "documentId": "d-031",
+        "children": [
+          {
+            "id": "d-032",
+            "kind": "book",
+            "title": "第一节　下津黄氏源流纪略",
+            "documentId": "d-032",
+            "children": []
+          },
+          {
+            "id": "d-033",
+            "kind": "book",
+            "title": "第二节　脚桶黄",
+            "documentId": "d-033",
+            "children": []
+          },
+          {
+            "id": "d-034",
+            "kind": "book",
+            "title": "第三节　山边寨",
+            "documentId": "d-034",
+            "children": []
+          },
+          {
+            "id": "d-035",
+            "kind": "book",
+            "title": "第四节　绞队井黄氏",
+            "documentId": "d-035",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "d-036",
+        "kind": "book",
+        "title": "第八章　洗马桥",
+        "documentId": "d-036",
+        "children": [
+          {
+            "id": "d-037",
+            "kind": "book",
+            "title": "第一节　洗马桥概况",
+            "documentId": "d-037",
+            "children": []
+          },
+          {
+            "id": "d-038",
+            "kind": "book",
+            "title": "第二节　林氏",
+            "documentId": "d-038",
+            "children": []
+          },
+          {
+            "id": "d-039",
+            "kind": "book",
+            "title": "第三节　赖氏",
+            "documentId": "d-039",
+            "children": []
+          },
+          {
+            "id": "d-040",
+            "kind": "book",
+            "title": "第四节　管氏",
+            "documentId": "d-040",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "d-041",
+        "kind": "book",
+        "title": "第九章　海鹅头乡",
+        "documentId": "d-041",
+        "children": [
+          {
+            "id": "d-042",
+            "kind": "book",
+            "title": "第一节　海鹅头乡概况",
+            "documentId": "d-042",
+            "children": []
+          },
+          {
+            "id": "d-043",
+            "kind": "book",
+            "title": "第二节　张氏",
+            "documentId": "d-043",
+            "children": []
+          },
+          {
+            "id": "d-044",
+            "kind": "book",
+            "title": "第三节　钟氏",
+            "documentId": "d-044",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "d-045",
+        "kind": "book",
+        "title": "第十章　沙瓯乡",
+        "documentId": "d-045",
+        "children": [
+          {
+            "id": "d-046",
+            "kind": "book",
+            "title": "第一节　沙瓯乡概况",
+            "documentId": "d-046",
+            "children": []
+          },
+          {
+            "id": "d-047",
+            "kind": "book",
+            "title": "第二节　柯氏",
+            "documentId": "d-047",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "d-048",
+        "kind": "book",
+        "title": "第十一章　杜猴寨",
+        "documentId": "d-048",
+        "children": [
+          {
+            "id": "d-049",
+            "kind": "book",
+            "title": "第一节　杜猴寨概况",
+            "documentId": "d-049",
+            "children": []
+          },
+          {
+            "id": "d-050",
+            "kind": "book",
+            "title": "第二节　李氏",
+            "documentId": "d-050",
+            "children": []
+          },
+          {
+            "id": "d-051",
+            "kind": "book",
+            "title": "第三节　郭氏",
+            "documentId": "d-051",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "d-052",
+        "kind": "book",
+        "title": "第十二章　落籍创祖",
+        "documentId": "d-052",
+        "children": [
+          {
+            "id": "d-053",
+            "kind": "book",
+            "title": "第一节　方氏",
+            "documentId": "d-053",
+            "children": []
+          },
+          {
+            "id": "d-054",
+            "kind": "book",
+            "title": "第二节　许氏",
+            "documentId": "d-054",
+            "children": []
+          },
+          {
+            "id": "d-055",
+            "kind": "book",
+            "title": "第三节　曾氏",
+            "documentId": "d-055",
+            "children": []
+          },
+          {
+            "id": "d-056",
+            "kind": "book",
+            "title": "第四节　吴氏",
+            "documentId": "d-056",
+            "children": []
+          },
+          {
+            "id": "d-057",
+            "kind": "book",
+            "title": "第五节　王氏",
+            "documentId": "d-057",
+            "children": []
+          },
+          {
+            "id": "d-058",
+            "kind": "book",
+            "title": "第六节　蔡氏",
+            "documentId": "d-058",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "construction",
+    "kind": "book",
+    "part": "第三篇",
+    "title": "乡村建设",
+    "description": "记录道路、水利、公共设施与乡村面貌变迁。",
+    "documentId": "d-059",
+    "children": [
+      {
+        "id": "d-060",
+        "kind": "book",
+        "title": "第一章　道路",
+        "documentId": "d-060",
+        "children": []
+      },
+      {
+        "id": "d-061",
+        "kind": "book",
+        "title": "第二章　房屋建设",
+        "documentId": "d-061",
+        "children": []
+      },
+      {
+        "id": "d-062",
+        "kind": "book",
+        "title": "第三章　水电建设",
+        "documentId": "d-062",
+        "children": []
+      },
+      {
+        "id": "d-063",
+        "kind": "book",
+        "title": "第四章　精神文明建设",
+        "documentId": "d-063",
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "population",
+    "kind": "book",
+    "part": "第四篇",
+    "title": "人口",
+    "description": "呈现人口规模、姓氏分布、迁徙与家庭结构。",
+    "documentId": "d-064",
+    "children": [
+      {
+        "id": "d-065",
+        "kind": "book",
+        "title": "第一章　人口发展",
+        "documentId": "d-065",
+        "children": []
+      },
+      {
+        "id": "d-066",
+        "kind": "book",
+        "title": "第二章　人口结构",
+        "documentId": "d-066",
+        "children": []
+      },
+      {
+        "id": "d-067",
+        "kind": "book",
+        "title": "第三章　人口迁播",
+        "documentId": "d-067",
+        "children": []
+      },
+      {
+        "id": "d-068",
+        "kind": "book",
+        "title": "第四章　退伍军人",
+        "documentId": "d-068",
+        "children": []
+      },
+      {
+        "id": "d-069",
+        "kind": "book",
+        "title": "第五章　计划生育",
+        "documentId": "d-069",
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "economy",
+    "kind": "book",
+    "part": "第五篇",
+    "title": "经济",
+    "description": "梳理农业、副业、集体经济与村民生计变化。",
+    "documentId": "d-070",
+    "children": [
+      {
+        "id": "d-071",
+        "kind": "book",
+        "title": "第一章　体制沿革",
+        "documentId": "d-071",
+        "children": []
+      },
+      {
+        "id": "d-072",
+        "kind": "book",
+        "title": "第二章　农业",
+        "documentId": "d-072",
+        "children": []
+      },
+      {
+        "id": "d-073",
+        "kind": "book",
+        "title": "第三章　水利",
+        "documentId": "d-073",
+        "children": []
+      },
+      {
+        "id": "d-074",
+        "kind": "book",
+        "title": "第四章　工商业",
+        "documentId": "d-074",
+        "children": []
+      },
+      {
+        "id": "d-075",
+        "kind": "book",
+        "title": "第五章　民生",
+        "documentId": "d-075",
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "politics",
+    "kind": "book",
+    "part": "第六篇",
+    "title": "政治",
+    "description": "记录村庄治理、组织沿革与基层公共事务。",
+    "documentId": "d-076",
+    "children": [
+      {
+        "id": "d-077",
+        "kind": "book",
+        "title": "第一章 建置沿革",
+        "documentId": "d-077",
+        "children": []
+      },
+      {
+        "id": "d-078",
+        "kind": "book",
+        "title": "第二章 中共下津党组织",
+        "documentId": "d-078",
+        "children": []
+      },
+      {
+        "id": "d-079",
+        "kind": "book",
+        "title": "第三章 人民代表大会",
+        "documentId": "d-079",
+        "children": []
+      },
+      {
+        "id": "d-080",
+        "kind": "book",
+        "title": "第四章 下津群团组织",
+        "documentId": "d-080",
+        "children": []
+      },
+      {
+        "id": "d-081",
+        "kind": "book",
+        "title": "第五章 政绩表彰称号",
+        "documentId": "d-081",
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "people",
+    "kind": "book",
+    "part": "第七篇",
+    "title": "人物",
+    "description": "收录村中贤达、干部、教师、乡贤与普通人物事迹。",
+    "documentId": "d-082",
+    "children": [
+      {
+        "id": "d-083",
+        "kind": "book",
+        "title": "第一章　古代人物",
+        "documentId": "d-083",
+        "children": []
+      },
+      {
+        "id": "d-084",
+        "kind": "book",
+        "title": "第二章　民国人物",
+        "documentId": "d-084",
+        "children": []
+      },
+      {
+        "id": "d-085",
+        "kind": "book",
+        "title": "第三章　革命人物",
+        "documentId": "d-085",
+        "children": []
+      },
+      {
+        "id": "d-086",
+        "kind": "book",
+        "title": "第四章　复员军人",
+        "documentId": "d-086",
+        "children": []
+      },
+      {
+        "id": "d-087",
+        "kind": "book",
+        "title": "第五章　烈士、荣誉军人",
+        "documentId": "d-087",
+        "children": []
+      },
+      {
+        "id": "d-088",
+        "kind": "book",
+        "title": "第六章　现代人物",
+        "documentId": "d-088",
+        "children": []
+      },
+      {
+        "id": "d-089",
+        "kind": "book",
+        "title": "第七章　乡贤风采",
+        "documentId": "d-089",
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "culture",
+    "kind": "book",
+    "part": "第八篇",
+    "title": "文化",
+    "description": "展现民俗、信仰、文艺、方言与乡土文化传统。",
+    "documentId": "d-090",
+    "children": [
+      {
+        "id": "d-091",
+        "kind": "book",
+        "title": "第一章　庙宇",
+        "documentId": "d-091",
+        "children": []
+      },
+      {
+        "id": "d-092",
+        "kind": "book",
+        "title": "第二章　祠堂",
+        "documentId": "d-092",
+        "children": []
+      },
+      {
+        "id": "d-093",
+        "kind": "book",
+        "title": "第三章　家谱文化",
+        "documentId": "d-093",
+        "children": []
+      },
+      {
+        "id": "d-094",
+        "kind": "book",
+        "title": "第四章　传统节日与风俗习惯",
+        "documentId": "d-094",
+        "children": []
+      },
+      {
+        "id": "d-095",
+        "kind": "book",
+        "title": "第五章　民间传说",
+        "documentId": "d-095",
+        "children": []
+      },
+      {
+        "id": "d-096",
+        "kind": "book",
+        "title": "第六章　古墓",
+        "documentId": "d-096",
+        "children": []
+      },
+      {
+        "id": "d-097",
+        "kind": "book",
+        "title": "第七章　宣传",
+        "documentId": "d-097",
+        "children": []
+      },
+      {
+        "id": "d-098",
+        "kind": "book",
+        "title": "第八章　文体活动",
+        "documentId": "d-098",
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "education",
+    "kind": "book",
+    "part": "第九篇",
+    "title": "教育",
+    "description": "记载学校、教师、学子与村庄教育发展。",
+    "documentId": "d-099",
+    "children": [
+      {
+        "id": "d-100",
+        "kind": "book",
+        "title": "第一章　私塾教育",
+        "documentId": "d-100",
+        "children": []
+      },
+      {
+        "id": "d-101",
+        "kind": "book",
+        "title": "第二章　小学教育",
+        "documentId": "d-101",
+        "children": []
+      },
+      {
+        "id": "d-102",
+        "kind": "book",
+        "title": "第三章　民办教育",
+        "documentId": "d-102",
+        "children": []
+      },
+      {
+        "id": "d-103",
+        "kind": "book",
+        "title": "第四章　初中教育",
+        "documentId": "d-103",
+        "children": []
+      },
+      {
+        "id": "d-104",
+        "kind": "book",
+        "title": "第五章　幼儿教育",
+        "documentId": "d-104",
+        "children": []
+      },
+      {
+        "id": "d-105",
+        "kind": "book",
+        "title": "第六章　业余教育",
+        "documentId": "d-105",
+        "children": []
+      },
+      {
+        "id": "d-106",
+        "kind": "book",
+        "title": "第七章　捐资兴学",
+        "documentId": "d-106",
+        "children": []
+      },
+      {
+        "id": "d-107",
+        "kind": "book",
+        "title": "第八章　下津小学历任校长",
+        "documentId": "d-107",
+        "children": []
+      },
+      {
+        "id": "d-108",
+        "kind": "book",
+        "title": "第九章　奖学金制度",
+        "documentId": "d-108",
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "chronicle",
+    "kind": "book",
+    "part": "第十篇",
+    "title": "大事记",
+    "description": "按时间记录村庄重要事件与历史节点。",
+    "documentId": "d-109",
+    "children": [
+      {
+        "id": "d-110",
+        "kind": "editorial",
+        "title": "《下津村史》勘误与审校报告",
+        "documentId": "d-110",
+        "children": []
+      }
+    ]
+  }
+]
