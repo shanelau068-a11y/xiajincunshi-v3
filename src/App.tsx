@@ -323,7 +323,7 @@ function HomePage({ data }: { data: Archive }) {
         <figure className="hero-image">
           <img
             src={asset("media/cover/xiajin-dijiao.jpg")}
-            alt="村落旧影，可见老屋、村路、池塘与远山，具体地点待补充"
+            alt="弯堤脚，可见老屋、村路、池塘与远山"
             width={1483}
             height={1061}
             fetchPriority="high"
@@ -334,7 +334,7 @@ function HomePage({ data }: { data: Archive }) {
           </span>
           <figcaption>
             <span>
-              乡土记忆 <i> / </i> 地点待补充
+              乡土记忆 <i> / </i> 弯堤脚
             </span>
             <span>乡土影像</span>
           </figcaption>
