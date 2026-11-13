@@ -5,11 +5,12 @@
   "documents": 110,
   "bookDocuments": 109,
   "editorialDocuments": 1,
-  "photos": 75,
+  "photos": 76,
   "people": 268,
   "timeline": 110,
-  "characters": 113249,
+  "characters": 113341,
   "bookImages": 0,
   "missingLinks": [],
-  "reviewNote": "保留原书与原有人工整理内容；扫描识别文字、照片说明、人物年代及史实仍需与原书核对。未迁入示例地图坐标及推测世系。勘误与审校报告为后期编辑附记，不属于原书内容，其判断仍需核验。"
+  "reviewNote": "保留原书与原有人工整理内容；扫描识别文字、照片说明、人物年代及史实仍需与原书核对。未迁入示例地图坐标及推测世系。勘误与审校报告为后期编辑附记，不属于原书内容，其判断仍需核验。",
+  "corrections": 2
 }

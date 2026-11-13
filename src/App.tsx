@@ -20,12 +20,14 @@ import {
   Home,
   Info,
   MapPin,
+  Network,
   Search,
   Share2,
   UsersRound,
   X,
 } from "lucide-react";
 import Reader, { type ArchiveDocument } from "./Reader";
+import GenealogyPage from "./GenealogyPage";
 
 type CatalogItem = {
   id: string;
@@ -87,6 +89,7 @@ const nav = [
   { to: "/photos", label: "寻旧影", Icon: Camera },
   { to: "/timeline", label: "看春秋", Icon: Clock3 },
   { to: "/people", label: "访乡贤", Icon: UsersRound },
+  { to: "/genealogy", label: "查族谱", Icon: Network },
 ];
 function readLocal<T>(key: string, fallback: T): T {
   try {
@@ -248,6 +251,7 @@ function Footer() {
         <a href="#/about">
           关于这本书 <ArrowRight size={13} />
         </a>
+        <small className="site-credit">整理：ShaneLau</small>
       </div>
     </footer>
   );
@@ -257,7 +261,7 @@ function MobileNav({ route }: { route: string }) {
     nav[0],
     nav[1],
     { to: "/search", label: "搜索", Icon: Search },
-    nav[2],
+    { to: "/genealogy", label: "族谱", Icon: Network },
     { to: "/saved", label: "书签", Icon: Bookmark },
   ];
   return (
@@ -413,6 +417,17 @@ function HomePage({ data }: { data: Archive }) {
               </a>
             ))}
           </div>
+        </section>
+        <section className="home-genealogy">
+          <Network size={29} strokeWidth={1.3} />
+          <div>
+            <span className="eyebrow">FAMILY CONNECTIONS</span>
+            <h2>输入名字，查前后三代</h2>
+            <p>循着有出处的记载，找一找家族的来路。</p>
+          </div>
+          <a className="button-outline" href="#/genealogy">
+            查族谱 <ArrowRight size={17} />
+          </a>
         </section>
         <section className="home-reading">
           <SectionTitle eyebrow="BETWEEN THE PAGES" title="从这些篇章开始">
@@ -740,6 +755,13 @@ function SearchPage({ data, query }: { data: Archive; query: string }) {
         description="人名、乡名、老厝、旧事。你想念的，或许就在字里行间。"
       />
       <SearchForm initial={query} />
+      <a
+        className="search-genealogy-link"
+        href={`#/genealogy${query ? `?q=${encodeURIComponent(query)}` : ""}`}
+      >
+        <Network size={16} />
+        想查亲属关系？进入族谱查询 <ArrowRight size={14} />
+      </a>
       {!query ? (
         <>
           <div className="search-suggestions">
@@ -920,8 +942,8 @@ function PhotosPage({ data }: { data: Archive }) {
         description="旧影留住了街巷，也留住了生活。慢慢翻，看见熟悉的地方。"
       />
       <div className="page-summary">
-        <span>{data.photos.length} 帧原村史影像</span>
-        <p>照片取自村史扫描页，标题、年代及人物说明尚待逐一核对。</p>
+        <span>{data.photos.length} 帧乡土影像</span>
+        <p>收录原村史扫描页与后续补充资料，各图保留出处说明。</p>
       </div>
       <FilterBar
         categories={[...new Set(data.photos.map((p) => p.category))]}
@@ -1269,7 +1291,7 @@ function AboutPage({ data }: { data: Archive }) {
           本网站保留现有电子版文字。扫描识别可能存在错字，部分章节或表格可能有缺漏；照片标题、年代及人物说明尚待核对。人物的记载年代按原文呈现。后期整理的《勘误与审校报告》作为校对附记保留，供核对参考。
         </p>
         <p>
-          涉及姓氏源流与世系，请直接参阅原文；确切关系仍须结合原书、族谱与编纂者校核。
+          族谱查询依据已有明确记载，展示所选人物上下各三代及原文出处；资料缺漏不表示没有亲属。辈序按补充照片核对，刘氏总世次与桃坑世次分别标注，不按辈字推断父子关系。
         </p>
       </section>
       <button className="button-primary" onClick={share}>
@@ -1315,7 +1337,7 @@ export default function App() {
   }, []);
   useEffect(() => {
     if (!path.startsWith("/read/")) window.scrollTo(0, 0);
-    document.title = `${path.startsWith("/read/") ? data?.documents.find((d) => d.id === path.slice(6))?.title || "阅读" : ({ "/": "掌上的故乡", "/catalog": "村史目录", "/photos": "影像记忆", "/timeline": "大事记", "/people": "人物记载", "/search": "全文搜索", "/saved": "我的书签", "/about": "关于村史" } as Record<string, string>)[path] || "下津"} · 下津村史`;
+    document.title = `${path.startsWith("/read/") ? data?.documents.find((d) => d.id === path.slice(6))?.title || "阅读" : ({ "/": "掌上的故乡", "/catalog": "村史目录", "/photos": "影像记忆", "/timeline": "大事记", "/people": "人物记载", "/genealogy": "族谱查询", "/search": "全文搜索", "/saved": "我的书签", "/about": "关于村史" } as Record<string, string>)[path] || "下津"} · 下津村史`;
   }, [path, data]);
   const navigateReading = useCallback((id: string) => go(`/read/${id}`), []);
   const isReading = path.startsWith("/read/");
@@ -1376,6 +1398,8 @@ export default function App() {
           <TimelinePage data={data} />
         ) : path === "/people" ? (
           <PeoplePage data={data} query={query} />
+        ) : path === "/genealogy" ? (
+          <GenealogyPage query={query} />
         ) : path === "/saved" ? (
           <SavedPage data={data} />
         ) : path === "/about" ? (

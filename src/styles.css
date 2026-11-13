@@ -2451,3 +2451,83 @@ main:focus {
   white-space: nowrap;
   letter-spacing: 0.5px;
 }
+.site-credit {
+  font-size: 9px;
+  letter-spacing: 0.3px;
+  color: #8b9282;
+  margin-top: 5px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.home-genealogy {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: #edf0e3;
+  border: 1px solid #d5ddc7;
+  margin: 26px 0 0;
+  padding: 25px 28px;
+}
+.home-genealogy > svg {
+  color: #73865e;
+}
+.home-genealogy > div {
+  flex: 1;
+}
+.home-genealogy h2 {
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin: 5px 0;
+}
+.home-genealogy p {
+  font-size: 12px;
+  color: #7a856e;
+}
+.home-genealogy .button-outline {
+  font-size: 12px;
+  gap: 15px;
+}
+.search-genealogy-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  font-size: 12px;
+  color: #617b50;
+  margin: 8px 0 18px;
+}
+.search-genealogy-link svg:last-child {
+  margin-left: 3px;
+}
+@media (max-width: 760px) {
+  .home-genealogy {
+    padding: 22px 18px;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .home-genealogy > svg {
+    width: 24px;
+  }
+  .home-genealogy > div {
+    min-width: 210px;
+  }
+  .home-genealogy h2 {
+    font-size: 21px;
+  }
+  .home-genealogy p {
+    font-size: 10px;
+  }
+  .home-genealogy .button-outline {
+    margin-left: 39px;
+    min-height: 44px;
+    padding: 8px 18px;
+    font-size: 11px;
+  }
+  .search-genealogy-link {
+    font-size: 10px;
+  }
+  .site-footer .site-credit {
+    font-size: 8px;
+  }
+}

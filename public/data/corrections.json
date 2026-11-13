@@ -1,0 +1,19 @@
+[
+  {
+    "id": "name-yutong-20261112",
+    "documentId": "d-007",
+    "before": "思彤",
+    "after": "语彤",
+    "description": "雄明与陆佩东之女，依用户明确校正姓名为语彤。",
+    "authority": "用户校正",
+    "date": "2026-11-12"
+  },
+  {
+    "id": "liushi-generation-20261112",
+    "documentId": "d-007",
+    "description": "依用户提供的辈序牌匾补全66字。日为刘氏总143世、桃坑19世；名为刘氏总208世、桃坑84世。照片的競规范为竞，保留懋、昭、奕。",
+    "authority": "用户提供照片并明确要求以图片为准",
+    "sourceImage": "media/genealogy/liushi-generation-board.jpg",
+    "date": "2026-11-12"
+  }
+]

@@ -703,5 +703,14 @@
     "sourcePage": "下津村史 (205).jpg",
     "description": "由村史扫描页自动初筛裁出，建议后续人工校对标题、年代和人物说明。",
     "year": "村史扫描件"
+  },
+  {
+    "id": "liushi-generation-board-20261112",
+    "title": "刘氏辈序牌匾",
+    "category": "族谱资料",
+    "image": "media/genealogy/liushi-generation-board.jpg",
+    "sourcePage": "用户补充照片 · 辈序牌匾",
+    "description": "后续补充留存的刘氏辈序牌匾原图，日为刘氏总143世至名为208世；与村史中的桃坑19世至84世对应。牌匾是辈序依据，不作为父子关系证明。",
+    "year": "拍摄年代未注明"
   }
 ]

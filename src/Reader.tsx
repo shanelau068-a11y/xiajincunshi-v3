@@ -28,6 +28,7 @@ export type ArchiveDocument = {
   text: string;
   order: number;
   kind: "book" | "editorial";
+  correctionIds?: string[];
 };
 
 type ReaderProps = {
@@ -70,7 +71,9 @@ function HighlightedTitle({ title, query }: { title: string; query: string }) {
   while (found >= 0) {
     pieces.push(title.slice(cursor, found));
     pieces.push(
-      <mark key={found}>{title.slice(found, found + term.length)}</mark>,
+      <mark data-search-match="true" key={found}>
+        {title.slice(found, found + term.length)}
+      </mark>,
     );
     cursor = found + term.length;
     found = source.indexOf(needle, cursor);
@@ -130,6 +133,7 @@ function prepareHtml(document: ArchiveDocument, query: string) {
       while (found >= 0) {
         fragment.append(text.slice(cursor, found));
         const mark = parsed.createElement("mark");
+        mark.setAttribute("data-search-match", "true");
         mark.textContent = text.slice(found, found + term.length);
         fragment.append(mark);
         cursor = found + term.length;
@@ -273,7 +277,7 @@ export default function Reader({
     window.history.scrollRestoration = "manual";
     const frame = requestAnimationFrame(() => {
       if (query.trim()) {
-        const mark = article?.querySelector("mark");
+        const mark = article?.querySelector('mark[data-search-match="true"]');
         if (mark)
           mark.scrollIntoView({
             block: "center",
@@ -578,6 +582,17 @@ export default function Reader({
               </span>
             </div>
           </header>
+          {!!current.correctionIds?.length && (
+            <div className="reader-editorial-note">
+              <strong>本页校订说明</strong>
+              <p>
+                雄明之女姓名已校正为“语彤”；刘氏辈序依补充牌匾照片补全，分别注明总世次与桃坑世次。
+              </p>
+              <a href="#/genealogy?section=generation">
+                查看辈序逐字核对与原图
+              </a>
+            </div>
+          )}
           {editorial && (
             <div className="reader-editorial-note">
               <strong>校对附记</strong>

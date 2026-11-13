@@ -7,3 +7,4 @@ docs/*screenshot*
 docs/photo-contact-sheet.jpg
 docs/photo-index.txt
 test-results/
+.verification/

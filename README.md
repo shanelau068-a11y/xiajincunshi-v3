@@ -10,7 +10,8 @@
 
 - **读村史**：前言与十篇目录，可展开章、节，或按标题查找。
 - **搜索**：检索正文、人物和大事记；跳回原文并定位高亮词。
-- **寻旧影**：75张原村史扫描照片，按类别浏览和放大。
+- **寻旧影**：75张原村史扫描照片及1张补充的刘氏辈序牌匾原图，按类别浏览和放大。
+- **查族谱**：输入全名或原文简称，查看有明确记载的上下各三代及配偶；每条关系可回到原文核对，同名人物按支系分别选择。
 - **看春秋 / 访乡贤**：按类别、年代或关键词查看，均可返回原文出处。
 - **阅读器**：字号、夜间阅读、书签、继续阅读和链接分享。记录保存在当前浏览器，不跨设备同步。
 - **添加到手机桌面**：Safari 的分享菜单或安卓浏览器的安装/添加到主屏幕功能。首次联网完整加载后，正文可离线阅读；照片按浏览记录缓存。
@@ -26,6 +27,7 @@ npm run dev
 
 ```powershell
 npm run check:data
+npm test
 npm run build
 npm run preview
 ```
@@ -36,7 +38,10 @@ GitHub Pages 使用 `.github/workflows/pages.yml` 自动构建与发布。`vite.
 
 - `public/data/documents.json`：109份原有村史文档、1份后期校对附记，原有ID稳定。
 - `public/data/catalog.json`：前言与十篇，保留篇—章—节结构。
-- `public/data/photos.json` 与 `public/media/photos/`：75张真实存在的扫描照片及原始出处。
+- `public/data/photos.json`、`public/media/photos/` 与 `public/media/genealogy/`：扫描照片及补充的辈序原图，共76张，各自保留出处。
+- `public/data/genealogy.json`：按原文明示关系手工整理的查询图谱，每条父母子女或配偶关系均带出处和引文，不导入旧版自动猜测的树。
+- `public/data/generation.json`：依据用户照片核对的66字辈序，日为刘氏总143世／桃坑19世，名为刘氏总208世／桃坑84世。
+- `public/data/corrections.json`：用户确认的姓名及辈序校正记录；目前已将雄明之女“思彤”校正为“语彤”。
 - `public/data/people.json`：268条人物记载，保留原文出处；记载年代不直接解释为生卒年。
 - `public/data/timeline.json`：110则记事，按原书顺序呈现。
 - `public/data/manifest.json`：导入数量和资料边界。
@@ -46,11 +51,17 @@ GitHub Pages 使用 `.github/workflows/pages.yml` 自动构建与发布。`vite.
 
 ```powershell
 node scripts/import-legacy.mjs "E:\Shane\下津村史网页版260709"
+npm run data:genealogy
 npm run check:data
+npm test
 npm run build
 ```
 
 原项目中的示例地图点位和未核实的自动族谱树不用于新版；相关姓氏、创乡和谱牒文字仍保留在原文。扫描错字、照片说明、缺漏和史实须对照原书继续校订。后期《勘误与审校报告》明确标为“校对附记”，其判断不代表已核实结论。
+
+`npm run data:refresh` 在当前资料上重放已确认的校订并重新生成族谱；`import:legacy` 从旧资料导入时也会保留这些校订。不能把辈字相同、世次连续或姓氏相同当作亲子关系。资料未载的父母、子女及生母保持空缺，不表示没有亲属。
+
+页脚使用小字署名“整理：ShaneLau”。
 
 无需付费API、登录或后台服务。离线缓存版本含全部资料及照片的内容哈希，替换同名照片后重新构建也会更新缓存。
 

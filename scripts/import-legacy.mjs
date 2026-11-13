@@ -1,6 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  applyDocumentCorrections,
+  correctionRecords,
+  generationData,
+  supplementalPhotos,
+} from "./content-corrections.mjs";
 
 // Rebuild the public reading data from the user's original, locally preserved book.
 // No imports are executed from the old application and no source file is changed.
@@ -261,37 +267,39 @@ function sanitize(html, file) {
     .trim();
 }
 
-const documents = relativeFiles.map((file) => {
-  const item = fileMap.get(file),
-    raw = fs.readFileSync(path.join(bookRoot, file), "utf8");
-  const heading =
-    raw.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] ??
-    raw.match(/<title>([\s\S]*?)<\/title>/i)?.[1] ??
-    cleanName(path.posix.basename(file));
-  const topName = cleanName(file.split("/")[0]);
-  const chapter =
-    chapters.find(
-      (entry) => entry.file === file || cleanName(entry.file) === topName,
-    ) ?? chapters.find((entry) => file.startsWith(entry.part + " "));
-  const parentDirectory = path.posix.dirname(file);
-  const parentFile =
-    parentDirectory === "." ? null : parentByName.get(parentDirectory);
-  const html = sanitize(raw, file);
-  const kind = /勘误与审校报告/.test(file) ? "editorial" : "book";
-  return {
-    ...item,
-    kind,
-    title: plain(heading),
-    partId: chapter?.id ?? "chronicle",
-    partTitle: chapter
-      ? chapter.part +
-        (chapter.part === chapter.title ? "" : " " + chapter.title)
-      : "第十篇 大事记",
-    parentId: parentFile ? fileMap.get(parentFile).id : null,
-    html,
-    text: plain(html),
-  };
-});
+const documents = relativeFiles
+  .map((file) => {
+    const item = fileMap.get(file),
+      raw = fs.readFileSync(path.join(bookRoot, file), "utf8");
+    const heading =
+      raw.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] ??
+      raw.match(/<title>([\s\S]*?)<\/title>/i)?.[1] ??
+      cleanName(path.posix.basename(file));
+    const topName = cleanName(file.split("/")[0]);
+    const chapter =
+      chapters.find(
+        (entry) => entry.file === file || cleanName(entry.file) === topName,
+      ) ?? chapters.find((entry) => file.startsWith(entry.part + " "));
+    const parentDirectory = path.posix.dirname(file);
+    const parentFile =
+      parentDirectory === "." ? null : parentByName.get(parentDirectory);
+    const html = sanitize(raw, file);
+    const kind = /勘误与审校报告/.test(file) ? "editorial" : "book";
+    return {
+      ...item,
+      kind,
+      title: plain(heading),
+      partId: chapter?.id ?? "chronicle",
+      partTitle: chapter
+        ? chapter.part +
+          (chapter.part === chapter.title ? "" : " " + chapter.title)
+        : "第十篇 大事记",
+      parentId: parentFile ? fileMap.get(parentFile).id : null,
+      html,
+      text: plain(html),
+    };
+  })
+  .map(applyDocumentCorrections);
 const byId = new Map(documents.map((doc) => [doc.id, doc]));
 function childrenOf(id, ancestry = new Set()) {
   if (ancestry.has(id)) throw new Error("Circular catalog hierarchy");
@@ -364,6 +372,7 @@ const photos = readArray("gallery", "galleryPhotos")
       ...reviewed,
     };
   });
+photos.push(...supplementalPhotos);
 const people = readArray("people", "people").map((person) => {
   const match = person.biography.match(/\n\n来源：([^（]+)（([^）]+)）\s*$/);
   const sourceFile = match?.[2];
@@ -394,6 +403,7 @@ const manifest = {
   timeline: timeline.length,
   characters: documents.reduce((total, doc) => total + doc.text.length, 0),
   bookImages,
+  corrections: correctionRecords.length,
   missingLinks: [...missingLinks],
   reviewNote:
     "保留原书与原有人工整理内容；扫描识别文字、照片说明、人物年代及史实仍需与原书核对。未迁入示例地图坐标及推测世系。勘误与审校报告为后期编辑附记，不属于原书内容，其判断仍需核验。",
@@ -405,6 +415,8 @@ for (const [name, value] of Object.entries({
   people,
   timeline,
   manifest,
+  corrections: correctionRecords,
+  generation: generationData,
 }))
   fs.writeFileSync(
     path.join(dataRoot, name + ".json"),

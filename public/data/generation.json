@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 1,
+  "title": "刘氏桃坑辈序",
+  "sequence": "日旭伯延禧茂力贻远支光宗绍世德裕昆启鸿泽承先贤立新业春辉耀汉宇应运定乾坤群豪展壮志伟绩史长存桂兰恒畅懋嗣续竞鹏程建勋时作述昭著奕斯名",
+  "rows": [
+    {
+      "character": "日",
+      "global": 143,
+      "taokeng": 19
+    },
+    {
+      "character": "旭",
+      "global": 144,
+      "taokeng": 20
+    },
+    {
+      "character": "伯",
+      "global": 145,
+      "taokeng": 21
+    },
+    {
+      "character": "延",
+      "global": 146,
+      "taokeng": 22
+    },
+    {
+      "character": "禧",
+      "global": 147,
+      "taokeng": 23
+    },
+    {
+      "character": "茂",
+      "global": 148,
+      "taokeng": 24
+    },
+    {
+      "character": "力",
+      "global": 149,
+      "taokeng": 25
+    },
+    {
+      "character": "贻",
+      "global": 150,
+      "taokeng": 26
+    },
+    {
+      "character": "远",
+      "global": 151,
+      "taokeng": 27
+    },
+    {
+      "character": "支",
+      "global": 152,
+      "taokeng": 28
+    },
+    {
+      "character": "光",
+      "global": 153,
+      "taokeng": 29
+    },
+    {
+      "character": "宗",
+      "global": 154,
+      "taokeng": 30
+    },
+    {
+      "character": "绍",
+      "global": 155,
+      "taokeng": 31
+    },
+    {
+      "character": "世",
+      "global": 156,
+      "taokeng": 32
+    },
+    {
+      "character": "德",
+      "global": 157,
+      "taokeng": 33
+    },
+    {
+      "character": "裕",
+      "global": 158,
+      "taokeng": 34
+    },
+    {
+      "character": "昆",
+      "global": 159,
+      "taokeng": 35
+    },
+    {
+      "character": "启",
+      "global": 160,
+      "taokeng": 36
+    },
+    {
+      "character": "鸿",
+      "global": 161,
+      "taokeng": 37
+    },
+    {
+      "character": "泽",
+      "global": 162,
+      "taokeng": 38
+    },
+    {
+      "character": "承",
+      "global": 163,
+      "taokeng": 39
+    },
+    {
+      "character": "先",
+      "global": 164,
+      "taokeng": 40
+    },
+    {
+      "character": "贤",
+      "global": 165,
+      "taokeng": 41
+    },
+    {
+      "character": "立",
+      "global": 166,
+      "taokeng": 42
+    },
+    {
+      "character": "新",
+      "global": 167,
+      "taokeng": 43
+    },
+    {
+      "character": "业",
+      "global": 168,
+      "taokeng": 44
+    },
+    {
+      "character": "春",
+      "global": 169,
+      "taokeng": 45
+    },
+    {
+      "character": "辉",
+      "global": 170,
+      "taokeng": 46
+    },
+    {
+      "character": "耀",
+      "global": 171,
+      "taokeng": 47
+    },
+    {
+      "character": "汉",
+      "global": 172,
+      "taokeng": 48
+    },
+    {
+      "character": "宇",
+      "global": 173,
+      "taokeng": 49
+    },
+    {
+      "character": "应",
+      "global": 174,
+      "taokeng": 50
+    },
+    {
+      "character": "运",
+      "global": 175,
+      "taokeng": 51
+    },
+    {
+      "character": "定",
+      "global": 176,
+      "taokeng": 52
+    },
+    {
+      "character": "乾",
+      "global": 177,
+      "taokeng": 53
+    },
+    {
+      "character": "坤",
+      "global": 178,
+      "taokeng": 54
+    },
+    {
+      "character": "群",
+      "global": 179,
+      "taokeng": 55
+    },
+    {
+      "character": "豪",
+      "global": 180,
+      "taokeng": 56
+    },
+    {
+      "character": "展",
+      "global": 181,
+      "taokeng": 57
+    },
+    {
+      "character": "壮",
+      "global": 182,
+      "taokeng": 58
+    },
+    {
+      "character": "志",
+      "global": 183,
+      "taokeng": 59
+    },
+    {
+      "character": "伟",
+      "global": 184,
+      "taokeng": 60
+    },
+    {
+      "character": "绩",
+      "global": 185,
+      "taokeng": 61
+    },
+    {
+      "character": "史",
+      "global": 186,
+      "taokeng": 62
+    },
+    {
+      "character": "长",
+      "global": 187,
+      "taokeng": 63
+    },
+    {
+      "character": "存",
+      "global": 188,
+      "taokeng": 64
+    },
+    {
+      "character": "桂",
+      "global": 189,
+      "taokeng": 65
+    },
+    {
+      "character": "兰",
+      "global": 190,
+      "taokeng": 66
+    },
+    {
+      "character": "恒",
+      "global": 191,
+      "taokeng": 67
+    },
+    {
+      "character": "畅",
+      "global": 192,
+      "taokeng": 68
+    },
+    {
+      "character": "懋",
+      "global": 193,
+      "taokeng": 69
+    },
+    {
+      "character": "嗣",
+      "global": 194,
+      "taokeng": 70
+    },
+    {
+      "character": "续",
+      "global": 195,
+      "taokeng": 71
+    },
+    {
+      "character": "竞",
+      "global": 196,
+      "taokeng": 72
+    },
+    {
+      "character": "鹏",
+      "global": 197,
+      "taokeng": 73
+    },
+    {
+      "character": "程",
+      "global": 198,
+      "taokeng": 74
+    },
+    {
+      "character": "建",
+      "global": 199,
+      "taokeng": 75
+    },
+    {
+      "character": "勋",
+      "global": 200,
+      "taokeng": 76
+    },
+    {
+      "character": "时",
+      "global": 201,
+      "taokeng": 77
+    },
+    {
+      "character": "作",
+      "global": 202,
+      "taokeng": 78
+    },
+    {
+      "character": "述",
+      "global": 203,
+      "taokeng": 79
+    },
+    {
+      "character": "昭",
+      "global": 204,
+      "taokeng": 80
+    },
+    {
+      "character": "著",
+      "global": 205,
+      "taokeng": 81
+    },
+    {
+      "character": "奕",
+      "global": 206,
+      "taokeng": 82
+    },
+    {
+      "character": "斯",
+      "global": 207,
+      "taokeng": 83
+    },
+    {
+      "character": "名",
+      "global": 208,
+      "taokeng": 84
+    }
+  ],
+  "sourceImage": "media/genealogy/liushi-generation-board.jpg",
+  "sourceDocumentId": "d-007",
+  "sourceNote": "依用户提供的刘氏辈序牌匾逐字核对。照片注“日为143世，至名字为208世”。书中另记日为桃坑19世，因此两种世次相差124。",
+  "transcriptionNote": "图片中的繁体字转换为对应简体；第196世为竞（競），193世为懋，204世为昭，206世为奕。",
+  "count": 66,
+  "startGlobal": 143,
+  "endGlobal": 208,
+  "startTaokeng": 19,
+  "endTaokeng": 84,
+  "reviewedAt": "2026-11-12"
+}
