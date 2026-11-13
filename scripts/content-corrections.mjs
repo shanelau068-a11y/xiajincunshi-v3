@@ -83,6 +83,15 @@ export const generationData = {
 
 export const supplementalPhotos = [
   {
+    id: "xiajin-old-village-20261113",
+    title: "下津村落旧影",
+    category: "村貌风物",
+    image: "media/photos/xiajin-old-village-20261113.jpg",
+    sourcePage: "补充旧照片",
+    description: "补充留存的村落旧照片，可见老屋、村路、池塘与远山。保留原图，拍摄年代及具体地点说明待补充。",
+    year: "拍摄年代未注明",
+  },
+  {
     id: "liushi-generation-board-20261112",
     title: "刘氏辈序牌匾",
     category: "族谱资料",
