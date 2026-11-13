@@ -189,7 +189,7 @@ function SearchForm({
 }
 function Header({ route }: { route: string }) {
   return (
-    <header className="site-header">
+    <header className={`site-header${route === "/" ? " home-header" : ""}`}>
       <div className="header-inner">
         <a className="brand" href="#/" aria-label="下津村史首页">
           <span className="brand-seal">
@@ -323,6 +323,8 @@ function HomePage({ data }: { data: Archive }) {
           <img
             src={asset("media/cover/xiajin-dijiao.png")}
             alt="下津堤脚，老屋、村路、池塘与远山"
+            width={1483}
+            height={1061}
             fetchPriority="high"
           />
           <div className="hero-photo-overlay" />
