@@ -89,7 +89,7 @@ export const supplementalPhotos = [
     image: "media/photos/xiajin-old-village-20261113.jpg",
     sourcePage: "补充旧照片",
     description:
-      "补充留存的村落旧照片，可见老屋、村路、池塘与远山。村史原文没有写明这一画面的具体地点，拍摄年代及地点说明待补充。",
+      "补充留存的弯堤脚旧照片，可见老屋、村路、池塘与远山。拍摄年代待补充。",
     year: "拍摄年代未注明",
   },
   {
