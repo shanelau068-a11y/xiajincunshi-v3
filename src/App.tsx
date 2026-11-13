@@ -28,6 +28,7 @@ import {
 } from "lucide-react";
 import Reader, { type ArchiveDocument } from "./Reader";
 import GenealogyPage from "./GenealogyPage";
+import { matchesTimelinePeriod } from "./timelinePeriod";
 
 type CatalogItem = {
   id: string;
@@ -321,8 +322,8 @@ function HomePage({ data }: { data: Archive }) {
         </div>
         <figure className="hero-image">
           <img
-            src={asset("media/cover/xiajin-dijiao.png")}
-            alt="下津堤脚，老屋、村路、池塘与远山"
+            src={asset("media/cover/xiajin-dijiao.jpg")}
+            alt="村落旧影，可见老屋、村路、池塘与远山，具体地点待补充"
             width={1483}
             height={1061}
             fetchPriority="high"
@@ -333,7 +334,7 @@ function HomePage({ data }: { data: Archive }) {
           </span>
           <figcaption>
             <span>
-              乡土记忆 <i> / </i> 下津堤脚
+              乡土记忆 <i> / </i> 地点待补充
             </span>
             <span>乡土影像</span>
           </figcaption>
@@ -994,14 +995,10 @@ function PhotosPage({ data }: { data: Archive }) {
 function TimelinePage({ data }: { data: Archive }) {
   const [category, setCategory] = useState("全部");
   const [period, setPeriod] = useState("全部年代");
-  const yearNumber = (e: Event) => Number(e.year.match(/\d{3,4}/)?.[0] || 0);
   const events = data.timeline.filter(
     (e) =>
       (category === "全部" || e.category === category) &&
-      (period === "全部年代" ||
-        (period === "1949年以前"
-          ? yearNumber(e) > 0 && yearNumber(e) < 1949
-          : yearNumber(e) >= 1949)),
+      matchesTimelinePeriod(e.year, period),
   );
   return (
     <div className="page-width">
