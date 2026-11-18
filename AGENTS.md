@@ -1,0 +1,45 @@
+# 下津村史项目协作规则
+
+本文件适用于后续 AI 编码代理和维护者。开始工作前先阅读本文件、`README.md`、`docs/AI_MAINTENANCE_GUIDE.md`，以及与任务相关的核对记录。
+
+## 资料准确性与来源
+
+1. 把原书/原始扫描、用户明确提供的更正、后期编辑校对意见区分开。校对意见不是原书结论，也不自动等于已证实事实。
+2. 每条新增历史文字、照片说明或族谱关系都要保留能追溯的来源。族谱边必须有 `sourceDocId` 和与关系方向相符的 `quote`。
+3. 不用相同姓氏、字辈、总世次、列表顺序、地理相邻或模型推理补造亲子、配偶、年份、照片年代或地点。资料没有写就保持未知。
+4. 姓名校正须限于用户明确授权的对象，保留 `content-corrections.mjs` 记录和回归测试；不要顺带改写同章其他内容。
+5. 刘氏辈序按用户确认的牌匾照片为准：66字，刘氏总世143—208、桃坑19—84。辈序本身不能证明具体亲子关系。
+6. 当前村貌照片经用户确认标注“弯堤脚”。需要改动地名时应遵从之后用户明确的更正并同步首页、照片说明和文档。
+7. 保留原书正文、影像文件与页面来源。网页优化图不能替代用户保存的原始扫描文件；不要把未提供的资料编出来。
+
+## 修改资料的规则
+
+- `public/data/*.json` 是网站构建直接使用的资料，但由脚本生成或校订的字段必须先改相应来源脚本，避免下一次生成覆盖手动修改。
+- 确认姓名/正文校订：先在 `scripts/content-corrections.mjs` 明确记录，再运行 `npm run data:correct`。修改 `d-007` 时同步审查 `tests/fixtures/d007-before.json`、基线哈希和相关测试；只有经过授权的字段才可变。
+- 补充照片：把图片副本放入合适的 `public/media/` 子目录，在 `supplementalPhotos` 中新增稳定 ID、标题、分类、相对路径、来源和不确定性说明，再运行 `npm run data:correct`。同时检查文件存在、清单数量和图片中的文字/场景。
+- 族谱关系：编辑 `scripts/build-genealogy.mjs` 中人工整理的节点和关系，附精确原文引句；运行 `npm run data:genealogy`。不要把旧版自动生成树带回来，也不要只改 `genealogy.json`。
+- 辈序：除非用户提供新的可核对依据并确认，否则不改 `generationSequence`、`generationRows` 或其双世次算法。
+- 重新导入原书是高影响操作：`scripts/import-legacy.mjs` 会重写 `public/data/` 并复制图片。只有明确需要更新原资料时才运行；先备份、确认源路径、检查生成差异，并验证校订、辈序、族谱和补充照片仍在。
+- 前端页面资料样式、原书 HTML 与脚本输出要分层维护。不要在运行时追加无法追溯的“事实”。
+
+## 开发和验证
+
+```powershell
+npm ci
+npm run check:data
+npm test
+npm run build
+```
+
+涉及用户界面时还要在手机窄屏和桌面宽屏实际查看；首页图片必须保持完整比例。检查所有新增图片路径、hash 直达链接、无横向溢出和固定底栏遮挡。数据校正应检查出处能打开并定位到相关词句。
+
+不要提交 `.env`、令牌、账户导出、无关本机资料、`node_modules/`、`dist/` 或临时截图。不要关闭资料来源限制，也不要给原书资料附加未经权利人确认的开源许可证。
+
+## GitHub 与发布边界
+
+- `origin` 是公开正式站点仓库 `shanelau068-a11y/xiajincunshi-v3`，push 到 `main` 会触发 GitHub Pages。
+- `private` 是私人代码备份仓库 `shanelau068-a11y/xiajincunshi-v3-private`。它保存源码历史，不负责发布站点。
+- 每次工作先 `git fetch origin` 并检查 `git status -sb`、`git log --graph --oneline --decorate -10`；远端有更新时先快进或安全整合，不能强推覆盖。
+- 发布前运行资料检查、测试和构建；提交后将同一个 `main` 提交分别推到 `origin` 与 `private`，然后核对两个远端的 `refs/heads/main` SHA。两个 push 不会成为原子操作，任意一个失败都要记录并重试。
+- 修改 Pages 路径时同步核对 `vite.config.ts`、仓库名、hash 路由、Service Worker scope 和正式网站链接。
+- 私人副本不改变公开站点的访问权限：网站和公开仓库中已发布的文字/图片仍可被任何访客访问。

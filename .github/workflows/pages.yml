@@ -12,6 +12,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build:
+    if: github.repository == 'shanelau068-a11y/xiajincunshi-v3'
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -28,6 +29,7 @@ jobs:
         with:
           path: dist
   deploy:
+    if: github.repository == 'shanelau068-a11y/xiajincunshi-v3'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
