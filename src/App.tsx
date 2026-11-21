@@ -1398,7 +1398,7 @@ export default function App() {
         ) : path === "/people" ? (
           <PeoplePage data={data} query={query} />
         ) : path === "/genealogy" ? (
-          <GenealogyPage query={query} />
+          <GenealogyPage query={query} biographies={data.people} />
         ) : path === "/saved" ? (
           <SavedPage data={data} />
         ) : path === "/about" ? (

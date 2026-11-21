@@ -18,6 +18,7 @@
 - 确认姓名/正文校订：先在 `scripts/content-corrections.mjs` 明确记录，再运行 `npm run data:correct`。修改 `d-007` 时同步审查 `tests/fixtures/d007-before.json`、基线哈希和相关测试；只有经过授权的字段才可变。
 - 补充照片：把图片副本放入合适的 `public/media/` 子目录，在 `supplementalPhotos` 中新增稳定 ID、标题、分类、相对路径、来源和不确定性说明，再运行 `npm run data:correct`。同时检查文件存在、清单数量和图片中的文字/场景。
 - 族谱关系：编辑 `scripts/build-genealogy.mjs` 中人工整理的节点和关系，附精确原文引句；运行 `npm run data:genealogy`。不要把旧版自动生成树带回来，也不要只改 `genealogy.json`。
+- 族谱检索：原文明示的字、号或别称应作为搜索别名录入；用户可能用“姓+字”查找，搜索索引可以组合姓氏与已证实别名，但显示名仍保留原书中的规范姓名。无关系节点但有人物简介时，可提供简介和全文出处，不得因此自动补亲属边。
 - 辈序：除非用户提供新的可核对依据并确认，否则不改 `generationSequence`、`generationRows` 或其双世次算法。
 - 重新导入原书是高影响操作：`scripts/import-legacy.mjs` 会重写 `public/data/` 并复制图片。只有明确需要更新原资料时才运行；先备份、确认源路径、检查生成差异，并验证校订、辈序、族谱和补充照片仍在。
 - 前端页面资料样式、原书 HTML 与脚本输出要分层维护。不要在运行时追加无法追溯的“事实”。

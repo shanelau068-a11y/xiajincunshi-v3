@@ -10,6 +10,10 @@ import {
   UsersRound,
 } from "lucide-react";
 import GenerationGuide from "./GenerationGuide";
+import {
+  findBiographyPeople,
+  findGenealogyPeople,
+} from "./genealogySearch.mjs";
 import "./genealogy.css";
 
 export type GenealogyPerson = {
@@ -43,11 +47,13 @@ type Relative = {
   relations: GenealogyRelation[];
 };
 type RelativeLayer = { distance: number; relatives: Relative[] };
-const normalName = (text: string) =>
-  text
-    .trim()
-    .replace(/[\s·・]/g, "")
-    .toLocaleLowerCase();
+type BiographyRecord = {
+  id: string;
+  name: string;
+  category: string;
+  summary: string;
+  documentId?: string | null;
+};
 const originalLink = (documentId: string, term: string) =>
   `#/read/${documentId}?q=${encodeURIComponent(term)}`;
 function evidenceTerm(relation: GenealogyRelation, people: GenealogyPerson[]) {
@@ -59,27 +65,6 @@ function evidenceTerm(relation: GenealogyRelation, people: GenealogyPerson[]) {
       )) ||
     relation.quote.slice(0, 12)
   );
-}
-
-export function findGenealogyPeople(people: GenealogyPerson[], term: string) {
-  const needle = normalName(term);
-  if (!needle) return [];
-  const names = (person: GenealogyPerson) =>
-    [person.name, ...person.aliases].map(normalName);
-  const score = (person: GenealogyPerson) => {
-    const values = names(person);
-    if (values.some((value) => value === needle)) return 0;
-    if (values.some((value) => value.startsWith(needle))) return 1;
-    return 2;
-  };
-  return people
-    .filter((person) => names(person).some((value) => value.includes(needle)))
-    .sort(
-      (a, b) =>
-        score(a) - score(b) ||
-        a.name.localeCompare(b.name, "zh-CN") ||
-        a.branch.localeCompare(b.branch, "zh-CN"),
-    );
 }
 
 export function buildRelativeLayers(
@@ -242,7 +227,13 @@ function RelativeBand({
   );
 }
 
-export default function GenealogyPage({ query = "" }: { query?: string }) {
+export default function GenealogyPage({
+  query = "",
+  biographies = [],
+}: {
+  query?: string;
+  biographies?: BiographyRecord[];
+}) {
   const [data, setData] = useState<GenealogyData | null>(null);
   const [loading, setLoading] = useState(true),
     [error, setError] = useState(false);
@@ -288,6 +279,13 @@ export default function GenealogyPage({ query = "" }: { query?: string }) {
   const matches = useMemo(
     () => (data ? findGenealogyPeople(data.people, submitted) : []),
     [data, submitted],
+  );
+  const biographyMatches = useMemo(
+    () =>
+      submitted && matches.length === 0
+        ? findBiographyPeople(biographies, submitted)
+        : [],
+    [biographies, matches.length, submitted],
   );
   const selected = data?.people.find((person) => person.id === selectedId);
   const ancestors = useMemo(
@@ -462,15 +460,48 @@ export default function GenealogyPage({ query = "" }: { query?: string }) {
           {submitted && !matches.length && (
             <div className="genealogy-empty">
               <UsersRound size={35} strokeWidth={1.1} />
-              <h2>暂未找到“{submitted}”</h2>
+              <h2>
+                {biographyMatches.length
+                  ? `村史中有“${submitted}”的人物记载`
+                  : `未找到“${submitted}”的族谱关系`}
+              </h2>
               <p>
-                可以换用全名、原文简称，或姓名中的一个字。这只表示当前关系资料尚未录入。
+                {biographyMatches.length
+                  ? "找到人物简介，但此人尚未纳入有出处的亲属关系图。这不表示没有亲属；需要逐条核对原文后才能补入关系。"
+                  : `当前族谱图只收录已逐条核对的关系，未收录不代表没有亲属。可以换姓名或到村史原文继续查找。`}
               </p>
+              {biographyMatches.length > 0 && (
+                <div className="genealogy-bio-results">
+                  {biographyMatches.slice(0, 8).map((person) => (
+                    <a
+                      className="genealogy-bio-result"
+                      href={
+                        person.documentId
+                          ? originalLink(person.documentId, person.name)
+                          : `#/people?q=${encodeURIComponent(person.name)}`
+                      }
+                      key={person.id}
+                    >
+                      <span>
+                        <b>{person.name}</b>
+                        <small>{person.category}</small>
+                      </span>
+                      <p>{person.summary}</p>
+                      <em>查看人物记载及出处</em>
+                    </a>
+                  ))}
+                  {biographyMatches.length > 8 && (
+                    <p className="genealogy-bio-more">
+                      还有{biographyMatches.length - 8}条同名/相关人物记载；请缩短或补全姓名以筛选。
+                    </p>
+                  )}
+                </div>
+              )}
               <a
                 href={`#/search?q=${encodeURIComponent(submitted)}`}
                 className="button-outline"
               >
-                去原文里找一找 <ArrowRight size={16} />
+                搜索全部村史原文 <ArrowRight size={16} />
               </a>
             </div>
           )}

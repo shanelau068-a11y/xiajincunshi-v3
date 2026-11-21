@@ -455,6 +455,7 @@ for (const [key, name, gen, char] of [
   ku[key] = son(key, name, "d-007", "窟尾沟乡 · 大房二", {
     generation: taokeng(gen, char),
   });
+people.get(ku.yicheng).aliases.push("我任");
 ku.ce = ancient.ce;
 people.get(ku.guisong).aliases.push("刘仰松", "仰松", "仰松公");
 people.get(ku.ce).aliases.push("松山公", "刘仕政", "仕政");

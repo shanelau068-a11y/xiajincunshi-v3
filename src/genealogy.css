@@ -119,6 +119,52 @@
 .genealogy-empty .button-outline {
   font-size: 12px;
 }
+.genealogy-bio-results {
+  display: grid;
+  gap: 10px;
+  width: min(100%, 720px);
+  margin: 0 auto 22px;
+  text-align: left;
+}
+.genealogy-bio-result {
+  display: block;
+  padding: 15px 18px;
+  border: 1px solid var(--family-line);
+  background: #fffef9;
+  color: var(--family-green);
+  text-decoration: none;
+}
+.genealogy-bio-result:hover {
+  border-color: #aebc9f;
+  background: var(--family-soft);
+}
+.genealogy-bio-result > span {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.genealogy-bio-result b {
+  font-size: 15px;
+  font-weight: 600;
+}
+.genealogy-bio-result small,
+.genealogy-bio-result em,
+.genealogy-bio-more {
+  color: var(--family-muted);
+  font-size: 11px;
+  font-style: normal;
+}
+.genealogy-bio-result p {
+  margin: 8px 0;
+  color: #5d6757;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.genealogy-bio-more {
+  margin: 0;
+  text-align: center;
+}
 .genealogy-welcome {
   display: flex;
   align-items: flex-start;
